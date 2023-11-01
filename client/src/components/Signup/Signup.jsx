@@ -7,7 +7,7 @@ function Signup() {
     const [user,setUser]=useState("");
   return (
     <form>
-     <FormHeader heading="Signup To Create Your Account" paragraph="Already have an account?" linkToUrl="/login" linkName="Login"/>
+     <FormHeader heading="Signup To Create Your Account" paragraph="Already have an account?" linkToUrl="/" linkName="Login"/>
 
      
      <FormInput labelFor="user" labelText="User" type="text" name="username" id="username" value={user} placeholder="Username" isRequired={true} handleChange={(e)=>setUser(e.target.value)}/>
