@@ -28,6 +28,9 @@ const userSchema=new mongoose.Schema({
     },
     emailExpiryToken:{
         type:Date
+    },
+    refreshToken:{
+        type:String
     }
     
 
