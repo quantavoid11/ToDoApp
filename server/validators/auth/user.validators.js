@@ -16,7 +16,7 @@ const userSignupValidator=()=>{
             .withMessage("Username must be lowercase")
             .isLength({min:5})
             .withMessage("Username must be at lease 5 characters long"),
-        body("Password")
+        body("password")
             .trim()
             .notEmpty()
             .withMessage("Password is required")

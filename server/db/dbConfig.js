@@ -1,12 +1,11 @@
 import mongoose from "mongoose";
-import * as dotenv from 'dotenv';
-dotenv.config({path:"../.env"});
+// import * as dotenv from 'dotenv';
+// dotenv.config({path:"../.env"});
 
 let dbInstance=undefined;
 
 const connectDB = async () => {
     try {
-    
         const connectionInstance = await mongoose.connect(
             process.env.MONGODB_URL
         )
@@ -22,4 +21,5 @@ const connectDB = async () => {
 }
 
 export default connectDB;
+
 
