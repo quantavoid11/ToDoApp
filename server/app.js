@@ -7,6 +7,7 @@ dotenv.config({path:"./.env"});
 
 
 const app=express();
+const PORT=process.env.PORT || 3000
 
 app.use(express.urlencoded({extended:false}));
 
@@ -14,6 +15,6 @@ app.use(express.urlencoded({extended:false}));
     app.use('/api/v1/users',userRouter);
   
 
-app.listen(3000,()=>{
-    console.log('server listening om port 3000');
+app.listen(PORT,()=>{
+    console.log('server listening on port '+PORT);
 })
