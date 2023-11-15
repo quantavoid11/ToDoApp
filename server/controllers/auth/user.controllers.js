@@ -42,6 +42,7 @@ const generateAccessAndRefeshTokens = async (userId) => {
 
 const registerUser = asyncHandler(async (req, res) => {
     const { username, email, password } = req.body;
+    console.log(req.body);
 
     const userExists = await User.findOne({ $or: [{ username }, { email }] });
     if (userExists) {
