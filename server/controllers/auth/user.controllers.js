@@ -54,7 +54,7 @@ const registerUser = asyncHandler(async (req, res) => {
         .update(password)
         .digest("hex");
 
-    const user = User.create({
+    const user = await User.create({
         username,
         email,
         password: hashedPassword,

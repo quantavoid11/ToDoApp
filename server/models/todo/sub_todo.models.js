@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const subTodoSchema=new mongoose.Schema({
-    title:{
+   description:{
         type:String,
         required:true
     },
