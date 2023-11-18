@@ -1,7 +1,8 @@
 import { Router } from "express";
 import {validate} from "../../middlewares/validate.js";
 import { createTodo,getAllTodos,getTodoById,updateTodo,deleteTodo,toggleTodoStatus } from "../../controllers/todo/todo.controllers.js";
-
+import { createTodoValidator,getAllTodosValidator,updateTodoValidator } from '../../validators/todo/todo.validators.js';
+import { pathValidator } from "../../validators/mongo/mongodb.validators.js";
 const router=Router();
 
 router
